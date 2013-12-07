@@ -23,7 +23,7 @@ import com.zynick.commons.Logger;
  * Notify us when there is no input into database
  * @author zynick
  */
-public class Notification {
+public class DataMonitor {
     
     // configuration key
     public static final String MONGO_HOST       = "MONGO_HOST";
@@ -68,7 +68,7 @@ public class Notification {
     // Trigger On/Off Mode Checking
     private boolean flag;
     
-    public Notification(String path) throws IOException, AddressException {
+    public DataMonitor(String path) throws IOException, AddressException {
         
         // get configuration from file
         config = new Configuration("config.txt");
@@ -172,11 +172,11 @@ public class Notification {
 
     public static void main(String[] args) throws Exception {
 
-        Notification n = new Notification(args[0]);
+        DataMonitor dm = new DataMonitor(args[0]);
         
         Logger.INSTANCE.log("process started.");
         try {
-            n.execute();
+            dm.execute();
         } finally {
             Logger.INSTANCE.log("process stopped.");
         }
