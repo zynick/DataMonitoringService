@@ -8,11 +8,20 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Configuration Reader
+ * @author zynick
+ */
 public class Configuration {
 
     private Map<String, String> map = new HashMap<String, String> ();
 
-    public Configuration(String path) throws FileNotFoundException, IOException {
+    /**
+     * Read configuration from path and store key value pair in map
+     * @param path
+     * @throws IOException
+     */
+    public Configuration(String path) throws IOException {
         // provide absolute directory if hit exception
         File f = new File(path);
         if (!f.exists())

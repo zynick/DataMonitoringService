@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * a very simple logger prefixed with date.
+ * A very simple logger prefixed with date.
  * @author zynick
  */
 public enum Logger {

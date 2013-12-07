@@ -12,6 +12,10 @@ import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+/**
+ * Email Sender
+ * @author zynick
+ */
 public class Email {
     
     public static enum Protocol { TLS, SSL }
@@ -20,7 +24,12 @@ public class Email {
     private final Session session;
 
     /**
-     * works in smtp.gmail.com, smtp.zoho.com
+     * Email Sender. Configure once and send multiple times.
+     * @param host email server
+     * @param protocol TLS or SSL. default is SSL
+     * @param user username
+     * @param pass password
+     * @throws AddressException
      */
     public Email(String host, Protocol protocol, String user, String pass) throws AddressException {
 
