@@ -1,0 +1,34 @@
+
+# Mongo Configuration
+MONGO_HOST=localhost
+MONGO_PORT=27017
+MONGO_DB=test
+MONGO_COLLECTION=data
+# the key of the datetime stored in collection
+MONGO_DATE_KEY=_id.datetime
+
+# Mail Configuration
+MAIL_HOST=smtp.gmail.com
+MAIL_PROTOCOL=TLS
+MAIL_USER=user@gmail.com
+MAIL_PASS=password
+MAIL_RECIPIENT=recipient1@gmail.com, recipient2@gmail.com
+
+# Message to send when data goes offline
+MAIL_SUBJECT_OFF=Data Monitoring Service: Data is Offline
+# param: date
+MAIL_CONTENT_OFF=We might lost some packet from at %s onwards
+
+# Mesage to send when data goes online
+MAIL_SUBJECT_ON=Data Monitoring Service: Data is Online
+# param: date
+MAIL_CONTENT_ON=We got data back around %s
+
+# time range in minutes
+RANGE=10
+
+# minimum amount record should exist in the time range
+EXPECTED_COUNT=8
+
+# Thread sleep interval in milliseconds (10*60*1000)
+INTERVAL=600000
