@@ -46,7 +46,7 @@ public class DataMonitor {
 
     public static final String DATE_FORMAT     = "yyyy-MM-dd HH:mm:ss zzz";
 
-    private Configuration config;
+    private final Configuration config;
 
     // Mongo Configuration
     private final DBCollection collection;
