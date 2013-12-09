@@ -18,46 +18,52 @@ It consists of two states:
 
 ## Configuration (config.txt)
 
-Mongo Configuration
+######Mongo Configuration
  * **MONGO_HOST** database server
  * **MONGO_PORT** database port
  * **MONGO_DB** database db
  * **MONGO_COLLECTION** database collection
  * **MONGO_DATE_KEY** the key of the datetime stored in collection
 
-Mail Configuration
+######Mail Configuration
  * **MAIL_HOST** mail server
  * **MAIL_PROTOCOL** mail protocol, either TLS or SSL. default is SSL
  * **MAIL_USER** user who sends email notification to recipient(s)
  * **MAIL_PASS** user password
  * **MAIL_RECIPIENT** recipients who receive email notification when state change. multiple recipient is allowed, using comma as separator
 
-Mail Content
+######Mail Content
  * **MAIL_SUBJECT_OFF** subject when data goes offline
  * **MAIL_CONTENT_OFF** content when data goes offline. the first `%s` found in value will be replaced by time in `yyyy-MM-dd HH:mm:ss zzz` format
  * **MAIL_SUBJECT_ON** subject when data goes online
  * **MAIL_CONTENT_ON** content when data goes online. the first `%s` found in value will be replaced by time in `yyyy-MM-dd HH:mm:ss zzz` format
 
-Service Configuration
+######Service Configuration
  * **RANGE** range of time (in minutes) to check for expected amount of data comes in
  * **EXPECTED_COUNT** minimum amount of data record should exist within the time range
  * **INTERVAL** thread sleep interval (in milliseconds) before next execution
 
 ## Usage
 
-clone the repository:
-`git clone https://github.com/zynick/DataMonitoringService.git`
+######clone the repository
+```
+git clone https://github.com/zynick/DataMonitoringService.git
+```
 
-maven build:
-`mvn clean dependency:copy-dependencies package`
+######maven build
+```
+mvn clean dependency:copy-dependencies package
+```
 
-get the following files and put into **same directory**:
+######get the following files and put into **same directory**
 * config.txt
 * target/data-monitor-1.0.0.jar
 * target/*
 
-configuration (config.txt):  
+######configuration (config.txt)
 change accordingly to your environment preference.
 
-execute:
-`java -jar data-monitor-1.0.0.jar config.txt`
+######execute
+```
+java -jar data-monitor-1.0.0.jar config.txt
+```
