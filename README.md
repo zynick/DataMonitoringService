@@ -43,6 +43,12 @@ Consists of two states:
  * **EXPECTED_COUNT** minimum amount of data record should exist within the time range
  * **INTERVAL** thread sleep interval (in milliseconds) before next execution
 
+## Requirements
+
+ * [Maven](http://maven.apache.org/download.cgi) 3.0.5 and above
+ * [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html) 1.7
+ * [MongoDB](http://www.mongodb.org/downloads)
+
 ## Setup
 
 ###### Clone this repository
