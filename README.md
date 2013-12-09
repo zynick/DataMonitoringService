@@ -45,7 +45,7 @@ Consists of two states:
 
 ## Setup
 
-###### Clone the repository
+###### Clone this repository
 ```
 git clone https://github.com/zynick/DataMonitoringService.git
 ```
