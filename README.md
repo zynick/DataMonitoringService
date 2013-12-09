@@ -55,7 +55,7 @@ git clone https://github.com/zynick/DataMonitoringService.git
 mvn clean dependency:copy-dependencies package
 ```
 
-###### Get the following files and put into **same directory**
+###### Get the following files and put into a new directory
 * config.txt
 * target/data-monitor-1.0.0.jar
 * target/*
