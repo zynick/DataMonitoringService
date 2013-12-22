@@ -64,7 +64,7 @@ mvn clean dependency:copy-dependencies package
 ###### Get the following files and put into a new directory
 * config.txt
 * target/data-monitor-1.0.0.jar
-* target/*
+* target/dependency/
 
 ###### Configuration (config.txt)
 change accordingly to your environment preference.
